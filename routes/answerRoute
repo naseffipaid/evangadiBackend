@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { getAllAnswers, postAnswer } = require("../controller/answerController"); 
+
+// Routes for Answer API
+router.get("/:question_id", getAllAnswers); // Get all answers for a specific question by question_id
+
+router.post("/", postAnswer); // Post a new answer
+
+module.exports = router;
