@@ -7,16 +7,27 @@ const mysql2 = require("mysql2")
 //     password:process.env.PASSWORD,
 //     connectionLimit:10
 // })
+// const dbConnection = mysql2.createPool({
+//     user:process.env.USER,
+//     database:process.env.DATABASE,
+//     host:"sql101.infinityfree.com",
+//     password:process.env.PASSWORD,
+//     port:"3306",
+//     connectionLimit:10
+// })
+
+// remote mysql from infinity
+
+// host:"sql5.freesqldatabase.com"
+
 const dbConnection = mysql2.createPool({
     user:process.env.USER,
     database:process.env.DATABASE,
-    host:"sql101.infinityfree.com",
+    host:" localhost:3306",
     password:process.env.PASSWORD,
     port:"3306",
     connectionLimit:10
 })
-
-// remote mysql from infinity
 
 // console.log(process.env.JWT_SECRET)
 
